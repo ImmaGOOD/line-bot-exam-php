@@ -70,7 +70,7 @@ $idPush = $id;
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $idPush,
-				'messages' => [$messages],
+				'messages' => [$messages]
 			];
 	
 	
