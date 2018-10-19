@@ -55,16 +55,7 @@ function send_ms($id){
 	$channelSecret = 'a5966438c02bc014296c5ca5b43b5bc4';
 $idPush = $id;
 	
-	$messages = [
-				'type' => 'image',
-				"originalContentUrl" => 'https://www.w3schools.com/w3css/img_lights.jpg'
-			];
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $idPush,
-				'messages' => [$messages],
-			];
+	
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
