@@ -21,20 +21,22 @@ $events = json_decode($content, true);
             
              $message = $events['events'][0]['message']['text'];
             
-            $messages = [
-				'type' => 'text',
-				'text' => $text
-			];
+           // $messages = [
+		//		'type' => 'text',
+		//		'text' => $text
+		//	];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			
+			$ss ='';
 #ตัวอย่าง Message Type "Text"
     if($message == "สวัสดี"){
-       $data = [
-				'replyToken' => $replyToken,
-				'messages' => 'สวัสดีจ้า'
-			];
+       $ss = 'สวัสดีจ้า';
     }
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => $ss
+			];
+			
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
