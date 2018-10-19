@@ -69,7 +69,7 @@ $idPush = $id;
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
-				'replyToken' => $idPush,
+				'userID' => $idPush,
 				'messages' => [$messages]
 			];
 	
