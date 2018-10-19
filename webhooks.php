@@ -83,6 +83,7 @@ $idPush = $id;
 			$result = curl_exec($ch);
 			curl_close($ch);
 			echo $result . "\r\n";
+	echo "OK";
 }
 
 send_ms('Uc0a3582697fe7dd5aa58bb397fe252fe');
