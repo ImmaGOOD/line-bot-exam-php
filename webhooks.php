@@ -57,7 +57,7 @@ $idPush = $id;
 	
 	$messages = [
 				'type' => 'image',
-				'text' => 'https://www.w3schools.com/w3css/img_lights.jpg'
+				"originalContentUrl" => 'https://www.w3schools.com/w3css/img_lights.jpg'
 			];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
