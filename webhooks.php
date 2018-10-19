@@ -29,12 +29,12 @@ $events = json_decode($content, true);
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$ss ='';
 #ตัวอย่าง Message Type "Text"
-    if($messages['text'] == "สวัสดี"){
-       $ss = 'สวัสดีจ้า';
-    }
+   // if($messages['text'] == "สวัสดี"){
+ //      $ss = 'สวัสดีจ้า';
+ //   }
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => $ss
+				'messages' => $messages['text']
 			];
 			
 			$post = json_encode($data);
