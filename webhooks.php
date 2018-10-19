@@ -34,7 +34,7 @@ $events = json_decode($content, true);
  //   }
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => $messages['text']
+				'messages' => 'ppp'
 			];
 			
 			$post = json_encode($data);
