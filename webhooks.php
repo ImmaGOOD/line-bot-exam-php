@@ -58,22 +58,7 @@ $content = file_get_contents('php://input');
 
 $strAccessToken = "PPv2psVIO166J7ouwWrXVHVDBSpJmlajX6E2WIKHw0aXOGnZD1+UFLbXlfk5t9YV56hLZk3JvxIM4GBf7U3jExNolDBVRDk/2kXLsV6Wda5Pj4ecjRoR6vpSJ8Vp7q6KQLBDhEaVyaqtlrkqPJlAMwdB04t89/1O/w1cDnyilFU=";
 // Get POST body content
-	$channelSecret = 'a5966438c02bc014296c5ca5b43b5bc4';
 
-	
-	$messages = [
-				'type' => 'image',
-				'originalContentUrl' => 'https://www.w3schools.com/w3css/img_lights.jpg',
-				'previewImageUrl'  => 'https://www.w3schools.com/w3css/img_lights.jpg'
-			];
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/push';
-			$data = [
-				'userId' => $idPush,
-				'messages' => [$messages]
-			];
-	
-	
 	
 $strUrl = "https://api.line.me/v2/bot/message/push";
  
@@ -85,6 +70,7 @@ $arrPostData = array();
 $arrPostData['to'] = $id;
 $arrPostData['messages'][0]['type'] = "image";
 $arrPostData['messages'][0]['originalContentUrl'] = "https://www.w3schools.com/w3css/img_lights.jpg";
+$arrPostData['messages'][0]['previewImageUrl'] = "https://www.w3schools.com/w3css/img_lights.jpg";
  
  
 $ch = curl_init();
